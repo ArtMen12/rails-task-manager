@@ -1,0 +1,13 @@
+
+<div class="container w-25 mt-3">
+<h2><%= @task.title %></h2>
+<p>Details: <%= @task.details %></p>
+
+<%= link_to "Modifier une tâche", edit_path(@task.id) %>
+<br>
+<%= link_to "Supprimer", task_path(@task.id),
+      method: :delete,
+      data: { confirm: "êtes-vous sur?" } %>
+<br>
+<%= link_to "Revenir à la liste des tâches", tasks_path %>
+</div>
